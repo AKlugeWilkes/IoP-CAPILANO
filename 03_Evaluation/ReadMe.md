@@ -22,10 +22,9 @@ The graph ** “Runtime per query vs. number of queries” ** along with an R-Sq
 When normalized to an error percentage of 0.8385, a linear behavior is obtained. 
 t is concluded that the developed ontology has a linear scaling behavior within a margin of 0.8385 %.
  
-It was shown that the developed framework is **scalable** as one can integrate new entities for application and inherit other ontologies. 
-
-- As visualized in the figures querying and matching resources to tasks based on the required and provided capabilities was realized through SPARQL querying and Python-based allocation. 
-- Capabilities resulting from combining resources to a new one can be inherited from one instance to another. 
+- It was shown that the developed framework is **scalable** as one can integrate new entities for application and inherit other ontologies. 
+- As visualized in the figures **querying and matching resources to tasks** based on the required and provided capabilities was realized through SPARQL querying and Python-based allocation. 
+- **Capabilities** resulting from combining resources to a new one can be **inherited** from one instance to another. 
 - The needed interfaces for integrating a Python-based task allocation were developed and discussed. 
 
 In summary, the derived requirements were met and a formal description model for resources as a base for task allocation was developed, reducing the time for task allocation, formally done manually. 
