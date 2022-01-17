@@ -1,9 +1,9 @@
-
 ## Evaluation and results
 
 An **application ontology** was implemented to validate the framework within its intended scope and determine whether its output behavior provides an acceptable accuracy.
 Use-case-specific instances are modeled according to the conceptual ontology, creating a knowledge base/description model on an operational level. 
-## The process of truck chassis assembly is used as an application scenario: 
+
+The process of truck chassis assembly is used as an **application scenario**: 
 The parts ‘cross member’, ‘front member’ and ‘rear member’ have to be transported from storage to the chassis and have to be screwed onto ‘chassis’. 
 To fulfill this process, the capabilities ‘Screwing’, ‘Transporting’ and ‘Posi-tioning’ are requested with differing property parameters of acceleration, velocity, jerk, etc. 
 As resources, several stationary robots (ABB_4600, ABB_2600), mobile robots (Kairos) and equipment (gripper, screwdriver) are available, which provide the requested capabilities in varying resource combinations.
