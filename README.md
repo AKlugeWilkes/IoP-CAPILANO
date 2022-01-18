@@ -1,6 +1,7 @@
 # Ontology-based task allocation for heterogeneous resources in Line-less Mobile Assembly Systems
 
-Git project for ontology-based task allocation for heterogeneous resources in Line-less Mobile Assembly Systems in the context of the DFG-funded project IoP - Internet of Production. 
+Git project for ontology-based task allocation for heterogeneous resources in Line-less Mobile Assembly Systems. This project is funded by Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germanys Excellence Strategy – EXC-2023 Internet of Production – 390621612.
+The authors are responsible for the content.
 
 # Content 
 **Implementation**
