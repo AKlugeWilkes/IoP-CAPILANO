@@ -18,7 +18,11 @@ Application ontology and performance analysis of the task allocation framework
 A.Kluge-Wilkes@wzl.rwth-aachen.de
 
 Laboratory for Machine Tools and Production Engineering WZL of RWTH Aachen 
+
 Chair of Production Metrology and Quality Management
+
 Department Model-based Systems
+
 Group Model-based Assembly Automation
+
 
