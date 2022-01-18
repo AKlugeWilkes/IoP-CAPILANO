@@ -10,6 +10,7 @@ Git project for ontology-based task allocation for heterogeneous resources in Li
 **Task allocation framework**
 
 **Evaluation and results** 
+
 Application ontology and performance analysis of the task allocation framework
 
 # Contact:
