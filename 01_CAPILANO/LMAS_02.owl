@@ -1,0 +1,927 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#"
+     xml:base="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-21="http://www.semanticweb.org/balaj/ontologies/2021/4/untitled-ontology-21#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isMountedOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isCompatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isCompatibleWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isMountedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isMountedOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Acceleration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Acceleration">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Dynamics"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Dynamics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Dynamics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Payload -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Payload"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Repetability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Repetability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Velocity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Velocity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Dynamics"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic_ABB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#AGV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#AGV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Abstract"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Holons"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember_Gripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember_Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticGripper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isCompatibleWith"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Detector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Detector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#AGV"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalGripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalGripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalScrewDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalScrewDriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalTools"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#OperationalTools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalWelder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalWelder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalTools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isMountedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isMountedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember_Gripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember_Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticGripper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isCompatibleWith"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic_ABB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic_ABB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Generic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Holons -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Holons">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Physical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#KairosUR10 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#KairosUR10">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Linear_Rails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Linear_Rails">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Special"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#OperationalTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#OperationalTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Passive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Passive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Holons"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Physical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Physical"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticGripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticGripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticScrewDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticScrewDriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticTools"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticTools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticTools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#OperationalTools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember_Gripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember_Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#PneumaticGripper"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#isCompatibleWith"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Tracking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalScrewDriver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#EndEffector"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                                        <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Sensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Sensors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Passive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Special -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Special">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Active"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasCapability"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Sensors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Tracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Tracking">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#hasEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMemberGripper_Custom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMemberGripper_Custom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember_Gripper"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMemberGripper_Custom"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember_Gripper"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMemberGripper_Custom"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Linear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Linear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Linear_Rails"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember_Gripper"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Robot"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMemberGripper_Custom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMemberGripper_Custom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMemberGripper_Custom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#CrossMember_Gripper"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra1"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Extra2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#AGV"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_O -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_O">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#AGV"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMemberGripper_Custom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMemberGripper_Custom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#FrontMember_Gripper"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMA"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Gripping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#KairosUR10"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_O -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_O">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#KairosUR10"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#MobileManipulator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+        <isCompatibleWith rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81"/>
+        <Acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Acceleration>
+        <Payload rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Payload>
+        <Repetability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Repetability>
+        <Velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Velocity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#LinearAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#LinearAxis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Linear_Rails"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Linear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Positioning"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Job"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMemberGripper_Custom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMemberGripper_Custom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#RearMember_Gripper"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_Linear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ScrewDriver_ETP_TBP81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ElectricalScrewDriver"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_A"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Screwing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Transporting"/>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Detector_00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Detector_00">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Detector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_00">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#ABB4600_FASIMO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Donkey_O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Reflector_04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Reflector"/>
+        <isMountedOn rdf:resource="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#Kairos_A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Tracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/balaj/ontologies/2021/4/LMAS#iGPS_Tracking"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
