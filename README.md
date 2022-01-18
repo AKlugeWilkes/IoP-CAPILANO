@@ -3,13 +3,13 @@
 Git project for ontology-based task allocation for heterogeneous resources in Line-less Mobile Assembly Systems in the context of the DFG-funded project IoP - Internet of Production. 
 
 # Content 
-** Implementation **
+**Implementation**
 
-** Capability-based resource allocation ontology CAPILANO **
+**Capability-based resource allocation ontology CAPILANO**
 
-** Task allocation framework **
+**Task allocation framework**
 
-** Evaluation and results ** 
+**Evaluation and results** 
 Application ontology and performance analysis of the task allocation framework
 
 # Contact:
