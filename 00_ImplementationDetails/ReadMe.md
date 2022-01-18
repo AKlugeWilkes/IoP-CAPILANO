@@ -24,10 +24,12 @@ At first, individuals, which provide the requested capability are identified (e.
 This function facilitates the combinatory capability inheritance requirement. 
 If several resources match the capabilities, they are chosen in descending order, thus in the first query loop, the one with the closest matching parameter is selected (e.g. a pay-load of 20 kg is requested a gripper providing a payload of 25 kg would be preferred over one providing 40 kg), represented in Fig. 4 by a white square.
 The loop continues until all possible combinations of resources are listed in descending order. 
+Even though the query is passed through multiple programming environments, the SPARQL specific syntax and the keywords remains the same across these environments.
 
 Once the Cython Phaser processed all queries, the cached results are converted into CSV/TSV and forwarded to the **task allocation** step. 
-(Depending on the interchangeable third-party system carrying out the task alloca-tion, this conversion could be adapted, providing compatibility to other programs.) 
-During task allocation the best possible resource is selected. The ‘best’ is currently defined by the criteria 1) necessary equipment is already equipped on the robot 2) highest battery charge 3) first item of query list. 
+(Depending on the interchangeable third-party system carrying out the task allocation, this conversion could be adapted, providing compatibility to other programs.) 
+During task allocation the best possible resource is selected. 
+The ‘best’ is currently defined by the criteria 1) necessary equipment is already equipped on the robot 2) highest battery charge 3) first item of query list. 
 
 
 During **post-processing** the list of allocated resources and task is converted to be OWL readable and the result are integrated and updated in CAPILANO. 
@@ -36,10 +38,6 @@ During **post-processing** the list of allocated resources and task is converted
 
 
 
-During **post-processing** and once all queries are processed by the Cython phaser, the cached results are converted into CSV/TSV and forwarded to the task allocation step. 
-In dependence on the interchangeable third-party system carrying out the task allocation, this conversion could be adapted, providing compatibility to other programs. 
-During **task allocation** the best possible resource is selected (currently through depending on the criteria of: Equipped end-effector, highest battery charge and first result, in case the first two do not lead to a decision) for each task within the process chart. 
 
 
-Even though the query is passed through multiple programming environments, the SPARQL specific syntax and the keywords remains the same across these environments.
 
