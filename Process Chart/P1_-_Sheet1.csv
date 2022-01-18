@@ -1,0 +1,6 @@
+Holon Identifier,Holon Type,Holon Capabilities 1,Holon Capabilities 2,Holon Capabilities 3,Holon Capabilities 4,Holon Capabilities 5,Holon Compatability,Holon Equipment
+1,AGV,Transporting,None,None,None,None,None,None
+2,Robot,Positioning,Gripping,None,None,None,FrontMember,FrontMember_Gripper
+3,Robot,Positioning,Gripping,None,None,None,FrontMember,FrontMember_Gripper
+4,MobileManipulator,Positioning,Screwing,None,None,None,None,ScrewDriver_ETP_TBP81
+5,MobileManipulator,Positioning,Screwing,None,None,None,None,ScrewDriver_ETP_TBP81
