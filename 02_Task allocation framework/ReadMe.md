@@ -1,32 +1,43 @@
-## Evaluation and results
+## Implementation
 
-An **application ontology** was implemented to validate the framework within its intended scope and determine whether its output behavior provides an acceptable accuracy.
-Use-case-specific instances are modeled according to the conceptual ontology, creating a knowledge base/description model on an operational level. 
-
-The process of truck chassis assembly is used as an **application scenario**: 
-The parts ‘cross member’, ‘front member’ and ‘rear member’ have to be transported from storage to the chassis and have to be screwed onto ‘chassis’. 
-To fulfill this process, the capabilities ‘Screwing’, ‘Transporting’ and ‘Posi-tioning’ are requested with differing property parameters of acceleration, velocity, jerk, etc. 
-As resources, several stationary robots (ABB_4600, ABB_2600), mobile robots (Kairos) and equipment (gripper, screwdriver) are available, which provide the requested capabilities in varying resource combinations.
-
-A **video** of the evaluation scenario, implemented by the group Model-based Systems of the Laboratory for Machine Tools and Production Engineering WZL of RWTH Aachen, Chair of Production Metrology and Quality Management, Department Model-based Systems, can be found here: 
-https://futureassemblydemonstrator.dashboards.vfk.ipt.fraunhofer.de/
-
-Based on the application ontology, the framework’s performance is analyzed by measuring the time to process a task allocation. 
-Twenty unique queries  with varying degrees of complexity were created and used as the seed for a randomizer to generate processes charts. 
-For each data point, five process charts with the same number of queries, but unique randomized queries are processed and the run-time of these five charts is averaged to ensure uniform distribution of complexity within the five process charts. 
-
-The graph ** “Average runtime vs. number of queries” ** presents the scaling performance of the ontology. 
-The querying was carried out for 5, 25, 50, 100, 250, 500, 1000, 1500 and then every 1500 queries. 
-Based on the test data, it shows linear scaling behavior. 
-The graph ** “Runtime per query vs. number of queries” ** along with an R-Squared trendline, presents an upward trend, representing a non-linear behavior. 
-When normalized to an error percentage of 0.8385, a linear behavior is obtained. 
-t is concluded that the developed ontology has a linear scaling behavior within a margin of 0.8385 %.
+The framework consists of a means of storing and retrieving data (**data lake**), converting this data into a tailored schema (**data conversion**), querying the data in the ontology (here: CAPILANO) followed by **allocation** of the querying results, and converting the results back into a storable data format and thus closing the circle to the data lake. 
+Realizing the frameworks goal to match the task´s requirements to the resources´ capabilities, the process of querying and consecutive task allocation is detailed. 
  
-- It was shown that the developed framework is **scalable** as one can integrate new entities for application and inherit other ontologies. 
-- As visualized in the figures **querying and matching resources to tasks** based on the required and provided capabilities was realized through SPARQL querying and Python-based allocation. 
-- **Capabilities** resulting from combining resources to a new one can be **inherited** from one instance to another. 
-- The needed interfaces for integrating a Python-based task allocation were developed and discussed. 
+In a **pre-processing** stage the input process chart is retrieved from the data lake and converted into a custom schema adapted from the functional methodology of the MaRCO ontology, and the C4I metamodel. 
+The process chart contains the information regarding the requirements to perform the tasks and the task order. 
+Moreover the ontology including the resource and capability modelling is extracted. 
+The information contained is resource identifier, resource type, resource capabilities, resource compatibility and resource equipment. 
+A resource can have multiple capabilities, so each capability is allotted its column. 
 
-In summary, the derived requirements were met and a formal description model for resources as a base for task allocation was developed, reducing the time for task allocation, formally done manually. 
-For application in automatic station formation planning further measures, like reachability and manipulability, path and trajectory planning with collision avoidance have to be included. 
-Moreover, time relevance during application (e.g. traveling salesman problem) should be incorporated during task allocation, providing optimized allocation. 
+
+During the **processing step**, querying and task allocation are carried out. 
+The Python program communicates with the OWL-based ontological system through the Python add-on package "owlReady2".
+To generate the inferred hierarchy with OwlReady2 an external virtually isolated Java environment is deployed for the HermiT Reasoner. 
+The resulting inferred hierarchy is used as foundation for the querying of matching capabilities and is derived at request.
+Enabling duplex data transmission a communication channel between the Python environment and the virtually isolated Java environment is established through a Cython phaser. 
+Through the Cython phaser advanced reasoner commands can be sent to the virtually isolated Java environment and the inferred hierarchy can be accessed for querying. 
+For querying, the requested list of capabilities of the process chart is converted in a SPARQL query by the Python-based Cython Phaser. 
+
+Fig. 4 visualizes one **query loop** for the capabilities of ‘Screwing’, ‘Positioning’ and ‘Transporting’. 
+The SPARQL queries are forwarded to the JAVA-based HermiT Reasoner and the output is cached by checking the compatibility of capabilities and inferring implicit capabilities. 
+At first, individuals, which provide the requested capability are identified (e.g. ‘ScrewDriver_1’ and ‘ScrewDriver_2’ for ‘Screwing’), then the HermiT Reasoner checks for combinable capabilities of the resources, e.g., if a capability is required, which could be provided by a specific robot in combination with a particular end-effector (here: ‘Screw-Driver_1’ and ‘MobileManipulator’ are combinable through ‘EndEffector Type 01’).
+This function facilitates the combinatory capability inheritance requirement. 
+If several resources match the capabilities, they are chosen in descending order, thus in the first query loop, the one with the closest matching parameter is selected (e.g. a pay-load of 20 kg is requested a gripper providing a payload of 25 kg would be preferred over one providing 40 kg), represented in Fig. 4 by a white square.
+The loop continues until all possible combinations of resources are listed in descending order. 
+Even though the query is passed through multiple programming environments, the SPARQL specific syntax and the keywords remains the same across these environments.
+
+Once the Cython Phaser processed all queries, the cached results are converted into CSV/TSV and forwarded to the **task allocation** step. 
+(Depending on the interchangeable third-party system carrying out the task allocation, this conversion could be adapted, providing compatibility to other programs.) 
+During task allocation the best possible resource is selected. 
+The ‘best’ is currently defined by the criteria 1) necessary equipment is already equipped on the robot 2) highest battery charge 3) first item of query list. 
+
+
+During **post-processing** the list of allocated resources and task is converted to be OWL readable and the result are integrated and updated in CAPILANO. 
+
+ 
+
+
+
+
+
+
