@@ -1,2 +1,2 @@
-# Cabability Based Holon Allocation Ontology
+# Capability Based Holon Allocation Ontology
 
