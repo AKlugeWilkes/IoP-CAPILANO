@@ -1,4 +1,4 @@
-## Evaluation and results
+## CAPabILity-based resource AllocatioN Ontology (CAPILANO)
 
 An **application ontology** was implemented to validate the framework within its intended scope and determine whether its output behavior provides an acceptable accuracy.
 Use-case-specific instances are modeled according to the conceptual ontology, creating a knowledge base/description model on an operational level. 
