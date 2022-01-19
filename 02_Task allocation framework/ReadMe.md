@@ -35,7 +35,7 @@ The ‘best’ is currently defined by the criteria 1) necessary equipment is al
 During **post-processing** the list of allocated resources and task is converted to be OWL readable and the result are integrated and updated in CAPILANO. 
 
 
-For details on the programs and their implementation see folder "Implementation". 
+For details on the programs and their implementation see folder **Implementation**. 
 
  
 

@@ -30,3 +30,5 @@ t is concluded that the developed ontology has a linear scaling behavior within 
 In summary, the derived requirements were met and a formal description model for resources as a base for task allocation was developed, reducing the time for task allocation, formally done manually. 
 For application in automatic station formation planning further measures, like reachability and manipulability, path and trajectory planning with collision avoidance have to be included. 
 Moreover, time relevance during application (e.g. traveling salesman problem) should be incorporated during task allocation, providing optimized allocation. 
+
+For details on the programs and their implementation see folder **Implementation**. 
