@@ -1,4 +1,4 @@
-## Implementation
+## Task allocation framework
 
 The framework consists of a means of storing and retrieving data (**data lake**), converting this data into a tailored schema (**data conversion**), querying the data in the ontology (here: CAPILANO) followed by **allocation** of the querying results, and converting the results back into a storable data format and thus closing the circle to the data lake. 
 Realizing the frameworks goal to match the task´s requirements to the resources´ capabilities, the process of querying and consecutive task allocation is detailed. 
@@ -33,6 +33,9 @@ The ‘best’ is currently defined by the criteria 1) necessary equipment is al
 
 
 During **post-processing** the list of allocated resources and task is converted to be OWL readable and the result are integrated and updated in CAPILANO. 
+
+
+For details on the programs and their implementation see folder "Implementation". 
 
  
 
