@@ -19,7 +19,8 @@ The steps and parts of the task allocation are detailed.
 **Evaluation and results** 
 
 An application ontology is implemented and the performance of the task allocation framework is analysed. The results of the validation are presented. 
-
+A **video** of the evaluation scenario, implemented by the group Model-based Systems of the Laboratory for Machine Tools and Production Engineering WZL of RWTH Aachen, Chair of Production Metrology and Quality Management, Department Model-based Systems, can be found here:
+https://futureassemblydemonstrator.dashboards.vfk.ipt.fraunhofer.de/
 
 # Contact:
 
