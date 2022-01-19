@@ -6,13 +6,20 @@ The authors are responsible for the content.
 # Content 
 **Implementation**
 
+Details the developed programs.
+
 **Capability-based resource allocation ontology CAPILANO**
+
+Provides an overview over the developed ontology and visualizes an example.
 
 **Task allocation framework**
 
+The steps and parts of the task allocation are detailed.
+
 **Evaluation and results** 
 
-Application ontology and performance analysis of the task allocation framework
+An application ontology is implemented and the performance of the task allocation framework is analysed. The results of the validation are presented. 
+
 
 # Contact:
 
