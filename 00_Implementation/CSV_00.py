@@ -1,3 +1,20 @@
+#
+# CAPILANO - CSV Read Module
+#
+#Document Control
+#
+#V3.2 - 19.01.2022 - Adapted the system to be agnostic - KLW_GNS
+#V3.1 - 03.01.2022 - Added support for diagnostic Module - KLW_GNS
+#V3.0 - 27.12.2021 - V3.0 Stable Release - KLW_GNS
+#V2.0 - 20.12.2021 - V2.0 Stable Release - KLW_GNS
+#V1.1 - 11.12.2021 - Adapting Functional operation from the root - KLW_GNS
+#V1.0 - 15.10.2021 - Draft Program - KLW_GNS
+#
+#Author(s):
+#
+#KLW_GNS - Balaji Gunaseelan
+#
+
 import csv
 from LMAS_00 import SPARQL_2Query
 from LMAS_00 import SPARQL_3Query

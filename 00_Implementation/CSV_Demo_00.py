@@ -1,3 +1,19 @@
+#
+# CAPILANO - CSV Diagnostic Port Module
+#
+#Document Control
+#
+#V3.1 - 19.01.2022 - Adapted the system to be agnostic - KLW_GNS
+#V3.0 - 03.01.2022 - V3.0 Stable Release - KLW_GNS
+#V2.0 - 22.11.2021 - V2.0 Stable Release - KLW_GNS
+#V1.1 - 02.11.2021 - Finalizing allocation logics - KLW_GNS
+#V1.0 - 15.10.2021 - Draft Program - KLW_GNS
+#
+#Author(s):
+#
+#KLW_GNS - Balaji Gunaseelan
+#
+
 import csv
 from LMAS_00 import SPARQL_2Query
 from LMAS_00 import SPARQL_3Query
