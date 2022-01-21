@@ -25,7 +25,7 @@ from LMAS_00 import SPARQL_8Query
 
 def Read_ProcessChart_Demo (chart):
 
-    data = ("Process/%s - Sheet1.csv" %chart)
+    data = ("Process/%s - Sheet1.csv" %chart) #Ensure that the Process chart follows the naming convection "PX-Sheet1.csv" and the file is present on the root
 
     with open(data) as csv_file:
         csv_reader = list(csv.reader(csv_file))
