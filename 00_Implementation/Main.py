@@ -28,7 +28,7 @@ from LMAS_00 import SPARQL_7Query
 import time
 
 #Read_ProcessChart_Demo("P2")
-Holon_allocation = Read_ProcessChart("P3")
+Holon_allocation = Read_ProcessChart#("Insert Process Chart Name")
 
 time.sleep(0.0005)
 
