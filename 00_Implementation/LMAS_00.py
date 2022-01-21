@@ -23,13 +23,13 @@ import owlready2
 
 def SPARQL_2Query (type, cap1):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -48,13 +48,13 @@ def SPARQL_2Query (type, cap1):
 
 def SPARQL_3Query (type, cap1, cap2):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -73,13 +73,13 @@ def SPARQL_3Query (type, cap1, cap2):
 
 def SPARQL_4Query (type, cap1, cap2, cap3):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -98,13 +98,13 @@ def SPARQL_4Query (type, cap1, cap2, cap3):
 
 def SPARQL_5Query (type, cap1, cap2, cap3, cap4):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -123,13 +123,13 @@ def SPARQL_5Query (type, cap1, cap2, cap3, cap4):
 
 def SPARQL_6Query (type, cap1, cap2, cap3, cap4, cap5):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -148,13 +148,13 @@ def SPARQL_6Query (type, cap1, cap2, cap3, cap4, cap5):
 
 def SPARQL_7Query (type, cap1, cap2, cap3, cap4, cap5, cap6):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
@@ -173,13 +173,13 @@ def SPARQL_7Query (type, cap1, cap2, cap3, cap4, cap5, cap6):
 
 def SPARQL_8Query (type, cap1, cap2, cap3, cap4, cap5, cap6, cap7):
 
-    owlready2.JAVA_EXE = "C:/Program Files/Java/jre1.8.0_301/bin/java.exe"
+    owlready2.JAVA_EXE = #"Insert JAVA.exe path" 
 
-    onto_path.append("D:/Data/RWTH/WZL/Thesis/Ontology")
-    onto = get_ontology("LMAS_02.owl")
+    onto_path.append#("Insert Ontology Path")
+    onto = get_ontology#("Insert ontology name")
     onto.load()
 
-    sync_reasoner(onto)
+    sync_reasoner(onto) #HermiT reasoner
 
     #type = "MobileManipulator"
     #cap1 = "Screwing"
