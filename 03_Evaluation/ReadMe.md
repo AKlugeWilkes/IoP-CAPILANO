@@ -12,7 +12,7 @@ A **video** of the evaluation scenario, implemented by the group Model-based Sys
 https://futureassemblydemonstrator.dashboards.vfk.ipt.fraunhofer.de/
 
 Based on the application ontology, the framework’s performance is analyzed by measuring the time to process a task allocation. 
-Twenty unique queries with varying degrees of complexity were created and used as the seed for a randomizer to generate processes charts. 
+Twenty unique queries (Shown in **"Seed Queries"**) with varying degrees of complexity were created and used as the seed for a randomizer to generate processes charts. 
 For each data point, five process charts with the same number of queries, but unique and randomized queries are processed and the run-time of these five charts is averaged to ensure uniform distribution of complexity within the five process charts. 
 
 The graph **“Average runtime vs. number of queries”** presents the scaling performance of the ontology. 
