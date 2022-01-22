@@ -35,6 +35,16 @@ In case the run-time of the system needs to be timed, the CAPILANO system is ini
 - Allocation_00.py
 - CSV_00.py
 
+# **Necessary Packages**
+
+- OWLReady2.0
+- Cython Phaser
+- HermiT Reasoner
+- Java Environment
+- NumPy
+- Pandas
+- time
+
 # Steps to run CAPILANO
 
 1. Open LMAS_00.py and update the paths for JAVA.EXE, Ontology, Ontology IRI, and HermiT reasoner.
