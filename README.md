@@ -25,7 +25,7 @@ https://futureassemblydemonstrator.dashboards.vfk.ipt.fraunhofer.de/
 
 # Contact:
 
-A.Kluge-Wilkes@wzl.rwth-aachen.de
+A.Kluge-Wilkes@wzl-mq.rwth-aachen.de
 
 Laboratory for Machine Tools and Production Engineering WZL of RWTH Aachen 
 
